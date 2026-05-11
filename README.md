@@ -14,7 +14,7 @@ This SDK was built for interaction with the [Beacon Node](https://github.com/air
 Meowtrix .NET SDK is [available on NuGet](https://www.nuget.org/packages/Meowtrix.Sdk/):
 
 ```
-dotnet add package Matrix.Sdk
+dotnet add package Meowtrix.Sdk
 ```
 
 # Use the SDK in your app
