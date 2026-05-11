@@ -1,4 +1,4 @@
-# **Matrix .NET SDK**
+# **Meowtrix .NET SDK**
 [![matrix-logo](matrix-logo.svg)](https://matrix.org/)
 
 This open-source library allows you to build .NET apps compatible with [Matrix Protocol](http://www.matrix.org).
@@ -11,16 +11,13 @@ This SDK was built for interaction with the [Beacon Node](https://github.com/air
 * [.NET Standard 2.0](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) or greater
 ## Installation
 
-Matrix .NET SDK is [available on NuGet](https://www.nuget.org/packages/Matrix.Sdk/):
+Meowtrix .NET SDK is [available on NuGet](https://www.nuget.org/packages/Meowtrix.Sdk/):
 
 ```
 dotnet add package Matrix.Sdk
 ```
 
 # Use the SDK in your app
-For a complete example, refer to [`Sample.cs`](https://github.com/baking-bad/matrix-dotnet-sdk/blob/main/Matrix.Sdk.Sample.Console/Sample.cs).
-You can also clone this repository and run `Matrix.Sdk.Sample.Console`.
-
 Here is step by step guide:
 
 ## 1. Create 
@@ -31,7 +28,7 @@ IMatrixClient client = factory.Create();
 ```
 
 ## 2. Login
-Currently, `MatrixClient` supports only [password login](https://spec.matrix.org/v1.1/client-server-api/#password-based).
+Currently, `MatrixClient` supports only [Password login](https://spec.matrix.org/v1.1/client-server-api/#password-based) or Token re-login.
 
 ```cs
 await client.LoginAsync(matrixNodeAddress, username, password, deviceId);
