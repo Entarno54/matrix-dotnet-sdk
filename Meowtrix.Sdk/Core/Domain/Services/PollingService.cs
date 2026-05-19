@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Meowtrix.Sdk.Core.Domain.MatrixRoom;
+using Meowtrix.Sdk.Core.Infrastructure.Dto.Room.Create;
 using Meowtrix.Sdk.Core.Infrastructure.Dto.Sync;
 using Meowtrix.Sdk.Core.Infrastructure.Services;
 using Microsoft.Extensions.Logging;
@@ -143,7 +144,7 @@ namespace Meowtrix.Sdk.Core.Domain.Services
                         .Distinct()
                         .ToList();
 
-                    var updatedRoom = new MatrixRoom.MatrixRoom(retrievedRoom.Id, room.Status, updatedUserIds);
+                    var updatedRoom = new MatrixRoom.MatrixRoom(retrievedRoom.Id, room.Status, updatedUserIds, RoomType.Room);
 
                     _matrixRooms.TryUpdate(room.Id, updatedRoom, retrievedRoom);
                 }
